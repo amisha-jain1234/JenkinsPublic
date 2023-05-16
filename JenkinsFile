@@ -1,0 +1,16 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+               ssh -i key3.pem ec2-user@3.109.186.103 -0
+            }
+        }
+        stage('Budddyyyyyy') {
+            steps {
+             echo "Hello Shashiiiiii Sir" << /var/www/html/latest/index.html
+            }
+        }
+    }
+}
