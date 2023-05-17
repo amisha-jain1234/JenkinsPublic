@@ -1,15 +1,16 @@
 pipeline {
     agent any
-    
+
     stages {
-        stage('SSH to EC2') {
+        stage('Hello') {
             steps {
-                script {
-                    sh 'ssh -i key3.pem ec2-user@3.109.186.103 -o StrictHostKeyChecking=no'
-                }
+              sh 'ssh -i key3.pem ec2-user@3.109.186.103 -o StrictHostKeyChecking=no'
             }
         }
-        
-        // Add more stages if needed
+        stage('Budddyyyyyy') {
+            steps {
+             echo "Hello Shashiiiiii Sir" << /var/www/html/latest/index.html
+            }
+        }
     }
 }
