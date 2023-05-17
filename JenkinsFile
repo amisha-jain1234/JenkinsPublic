@@ -4,12 +4,12 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-              sh 'ssh -i key3.pem ec2-user@3.109.186.103 -o StrictHostKeyChecking=no'
+                sh 'ssh -i key3.pem ec2-user@3.109.186.103 -o StrictHostKeyChecking=no'
             }
         }
         stage('Budddyyyyyy') {
             steps {
-             echo "Hello Shashiiiiii Sir" << /var/www/html/latest/index.html
+                sh 'echo "Hello Shashiiiiii Sir" > /var/www/html/latest/index.html'
             }
         }
     }
